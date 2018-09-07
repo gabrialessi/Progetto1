@@ -1,3 +1,0 @@
-function funge() {
-	var a;
-}
