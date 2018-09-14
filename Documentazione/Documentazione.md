@@ -42,13 +42,11 @@
 
 ## 1.1Informazioni sul progetto
 
-In questo capitolo raccogliere le informazioni relative al progetto, ad esempio:
-
 - .Allievo: Gabriele Alessi
 Docenti e supervisori: Adriano Barchi, Luca Muggiasca, Francesco Mussi
-- .Scuola d&#39;Arti e Mestieri di Trevano , sezione Informatica, Modulo 306
+- .Scuola d&#39;Arti e Mestieri di Trevano , Sezione informatica, Modulo 306
 - .Data inizio: 12.09.2018
-Data fine: …
+Data fine: xx.11.2018
 
 ## 1.2Abstract
 
@@ -67,11 +65,15 @@ As the size and complexity of today&#39;s most modern computer chips increase, n
 
 ## 1.3Scopo
 
-Lo scopo del progetto (scopi didattici/scopi operativi). Dovrebbe descrivere il mandato, ma non vanno ricopiate le informazioni del quaderno dei compiti (che va invece allegato).
+L&#39;obiettivo del progetto è realizzare un sito web che utilizza un form di registrazione con vari campi per memorizzare i dati di un utente in un file. L&#39;intera progettazione del mandato sarà fatta insieme ai colleghi della SAM I3, quindi risulterà anche un&#39;esperienza utile per imparare a fare un lavoro del genere in ambito professionale.
 
 ## 1.4Analisi
 
 ## 1.5Analisi del dominio
+
+Un prodotto di questo tipo viene utilizzato spessissimo al giorno d&#39;oggi. Basti pensare ai social network, ai moduli virtuali da compilare o alla creazione di un nuovo profilo per un servizio online. Questo servizio funziona esclusivamente nella rete internet e per realizzarlo è necessario solamente un computer con uno spazio web. Ovviamente esistono infinite soluzioni e prodotti utili per memorizzare dei dati, ad esempio si usano dai più comuni pezzi di carta per passare alle grandi banche dati. Solitamente gli utenti sono persone che hanno bisogno di un posto sicuro in cui conservare delle informazioni per tanto tempo ma essere comunque capaci di reperirle senza difficoltà (alberghi, ristoranti, utilizzatori di un qualche servizio, …).
+Questi utenti sono in cerca della soluzione più efficiente e conveniente in base al loro bisogno, quindi qualcuno può semplicemente utilizzare un software come Microsoft Excel se riesce a starci dietro.
+Per concludere si può dire che un prodotto di questa categoria
 
 Questo capitolo dovrebbe descrivere il contesto in cui il prodotto verrà utilizzato, da questa analisi dovrebbero scaturire le risposte a quesiti quali ad esempio:
 
@@ -101,42 +103,62 @@ Il progettista, dopo aver ricevuto il mandato, in collaborazione con il committe
 
 In base alla lista dei requisiti e all&#39;analisi degli stessi, il progettista redige una _specifica dei requisiti_ in cui elenca e descrive in modo dettagliato quali sono le funzionalità che il prodotto fornirà. La specifica dovrebbe essere abbastanza dettagliata da poter essere utilizzata come base per lo sviluppo, ma non troppo; ad esempio non dovrebbe contenere dettagli di implementazione, o definizioni dettagliate dell&#39;interfaccia grafica a meno che questi non siano considerati cruciali. Non si deve scordare che i requisiti non rappresentano delle attività bensì delle caratteristiche che il prodotto dovrà possedere.
 
-| **ID: REQ-012** |
+| **ID: 01** |
 | --- |
-| Nome | Creazione interfaccia banca dati |
+| Nome | Creazione pagina di benvenuto |
+| Priorità | 2 |
+| Versione | 1.0 |
+| Note |   |
+| Sotto requisiti |
+| 001 | Presenza di testo di benvenuto con un pulsante: &quot;Registrati&quot; |
+
+
+
+| **ID: 02** |
+| --- |
+| Nome | Creazione pagina con form di registrazione |
 | Priorità | 1 |
 | Versione | 1.0 |
-| Note | Si necessitano i permessi di root / Dipende dal requisito REQ-001 (Creazione DB) |
+| Note | Necessità di implementare la validazione di ogni campo prima della registrazione(la validazione dei campi non può essere lasciata ai meccanismi del browser ma dovrà essere implementata), e in caso di dati non validi o campi obbligatori non compilati sarà impossibile proseguire |
 | Sotto requisiti |
-| 001 | Si necessita una maschera di login |
-| 002 | Si dovranno poter immettere nuovi allievi |
-| 003 | Dovrà essere possibile la ricerca di allievi |
-
-Spiegazione elementi tabella dei requisiti:
-
-**ID** : identificativo univoco del requisito
-
-**Nome** : breve descrizione del requisito
-
-**Priorità** : indica l&#39;importanza di un requisito nell&#39;insieme del progetto, definita assieme al committente. Ad esempio poter disporre di report con colonne di colori diversi ha priorità minore rispetto al fatto di avere un database con gli elementi al suo interno. Solitamente si definiscono al massimo di 2-3 livelli di priorità.
-
-**Versione** : indica la versione del requisito. Ogni modifica del requisito avrà una versione aggiornata.
-
-Sulla documentazione apparirà solamente l&#39;ultima versione, mentre le vecchie dovranno essere inserite nei diari.
-
-**Note** : eventuali osservazioni importanti o riferimenti ad altri requisiti.
-
-**Sotto requisiti** : elementi che compongono il requisito.
+| 001 | Presenza di campi obbligatori contrassegnati con un asterisco e campi opzionali |
+| **002** | Presenza di un pulsante &quot;Cancella&quot; che azzera tutti i campi |
+| **003** | Presenza di un pulsante &quot;Avanti&quot; per proseguire |
 
 
 
+| **ID: 03** |
+| --- |
+| Nome | Creazione pagina per controllo dei dati |
+| Priorità | 2 |
+| Versione | 1.0 |
+| Note |   |
+| Sotto requisiti |
+| 001 | Presenza di un pulsante &quot;Correggi&quot; che riporta al form di registrazione per correggere di dati |
+| 002 | Presenza di un pulsante &quot;Registra&quot; che memorizza i dati |
+
+| ID: 04 |
+| --- |
+| Nome | Memorizzazione dei dati |
+| Priorità | 1 |
+| Versione | 1.0 |
+| Note |   |
+| Sotto requisiti |
+| 001 | Aggiunta di un campo ai dati con data e ora al momento della registrazione |
+| 002 | Presenza di un file con tutte le registrazioni: &quot;Registrazioni\_tutte.csv&quot; |
+| 003 | Presenza di un file con le registrazioni del giorno corrente: &quot;Registrazione\_aaaa-mm-gg.csv&quot; |
+| 004 | Presenza di una cartella &quot;Registrazioni&quot; sotto la cartella principale in cui situano i files |
 
 
-## 1.7Use case
 
-I casi d&#39;uso rappresentano l&#39;interazione tra i vari attori e le funzionalità del prodotto.
+| **ID: 05** |
+| --- |
+| Nome | Creazione pagina che controlla i dati dal file |
+| Priorità | 3 |
+| Versione | 1.0 |
+| Note | Questa pagina viene presentata alla fine della registrazione e mostra i dati letti dal file &quot;Registrazione\_aaaa-mm-gg.csv&quot; |
 
-## 1.8Pianificazione
+## 1.7Pianificazione
 
 Prima di stabilire una pianificazione bisogna avere almeno una vaga idea del modello di sviluppo che si intende adottare. In questa sezione bisognerà inserire il modello concettuale di sviluppo che si seguirà durante il progetto. Gli elementi di riferimento per una buona pianificazione derivano da una scomposizione top-down della problematica del progetto.
 
@@ -151,17 +173,17 @@ Figura 1: Esempio di diagramma di Gantt. |
 
 Se si usano altri metodi di pianificazione (es scrum), dovranno apparire in questo capitolo.
 
-## 1.9Analisi dei mezzi
+## 1.8Analisi dei mezzi
 
 Elencare e descrivere i mezzi disponibili per la realizzazione del progetto. Ricordarsi di sempre descrivere nel dettaglio le versioni e il modello di riferimento.
 
-### 1.9.1Software
+### 1.8.1Software
 
 SDK, librerie, tools utilizzati per la realizzazione del progetto e eventuali dipendenze.
 
 
 
-### 1.9.2Hardware
+### 1.8.2Hardware
 
 Su quale piattaforma dovrà essere eseguito il prodotto? Che hardware particolare è coinvolto nel progetto? Che particolarità e limitazioni presenta? Che hw sarà disponibile durante lo sviluppo?
 
