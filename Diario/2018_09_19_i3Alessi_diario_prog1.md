@@ -6,6 +6,7 @@
 
 ## Lavori svolti
 
+Oggi abbiamo controllato insieme ai docenti l&#39;analisi dei requisiti che abbiamo definito durante l&#39;ultima settimana. Successivamente abbiamo continuato con la pianificazione del progetto iniziando a sviluppare il nostro diagramma di gantt.
 
 | Orario | Lavoro svolto |
 | --- | --- |
