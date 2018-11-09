@@ -1,0 +1,91 @@
+/* Generalità */
+* {
+	font-family: 'Century Gothic';
+	color: #fff;
+	/* Definisco il riferimento del margine */
+	box-sizing: border-box;
+	line-height: 20px;
+}
+
+/* Sfondo */
+body {
+	background-image: linear-gradient(to right, #222, #444);
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 30px;
+	border: 2px solid #fff;
+}
+
+/* Titolo */
+h1 {
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+	text-shadow: 1px 1px #ddd;
+}
+
+/* Testo */
+p {
+	font-size: 20px;
+}
+
+/* Pulsante */
+a {
+	cursor: pointer;
+	text-decoration: none;
+	/* Animazione */
+	-webkit-transition: border-bottom .5s;
+	transition: border-bottom .5s; 
+}
+
+/* Tabella */
+table {
+	width: 100%;
+}
+
+/* Riga della tabella */
+td {
+	font-size: 10px;
+	text-align: center;
+	border: 1px solid #fff;
+	white-space: nowrap;
+	max-width: 0px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Apparizione del bordo */
+a:hover {
+	border-bottom: 1px solid #fff;
+}
+
+/* Pulsante destro home */
+.btn p {
+	float: right;
+	padding-right: 20px;
+}
+
+/* Cancello il float per terminare il contenitore */
+.btn:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+	
+	td {
+		font-size: 7px;
+	}
+
+	p {
+		font-size: 10px;
+	}
+
+	h1 {
+		font-size: 30px;
+		text-shadow: .5px .5px #ddd;
+	}
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Registrazione</title>
+
+	<meta charset="UTF-8">
+	<meta name="description" content="Form di registrazione">
+	<meta name="keywords" content="Progetto1 Modulo 306">
+	<meta name="author" content="Gabriele Alessi">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="style/form.css">
+	<link rel="icon" type="image/png" href="media/icon.png"/>
+
+	<script type="text/javascript" src="script/form.js"></script>
+
+</head>
+
+<body>
+
+	<h1>Registrazione</h1>
+
+	<!-- Form di registrazione -->
+	<form id="reg" method="POST" action="check.php">
+
+		<!-- Contenitore delle colonne -->
+		<div class="row">
+
+			<!-- Colonna sinistra -->
+			<div class="leftCol">
+
+				<!-- Campi -->
+				<p>Nome*</p>
+				<p>Cognome*</p>
+				<p>Data di nascita*</p>
+				<p>Indirizzo*</p>
+				<p>Numero civico*</p>
+				<p>Citta*</p>
+				<p>NAP*</p>
+				<p>Numero di telefono*</p>
+				<p>E-mail*</p>
+				<p>Genere (sesso)*</p>
+				<p>Hobby</p>
+				<p>Professione</p>
+
+			</div>
+
+			<!-- Colonna destra -->
+			<div class="rightCol">
+
+				<!-- Input nome -->
+				<p><input id="nome" type="text" name="nome"></p>
+
+				<!-- Input cognome -->
+				<p><input id="cognome" type="text" name="cognome"></p>			
+
+				<!-- Input data di nascita -->
+				<p><input id="nascita" type="date" name="nascita"></p>
+
+				<!-- Input indirizzo -->
+				<p><input id="indirizzo" type="text" name="indirizzo"></p>					
+
+				<!-- Input numero civico -->
+				<p><input id="civico" type="text" name="civico"></p>	
+
+				<!-- Input città -->
+				<p><input id="citta" type="text" name="citta"></p>				
+
+				<!-- Input NAP -->
+				<p><input id="nap" type="number" name="nap"></p>
+
+				<!-- Input numero di telefono -->
+				<p><input id="telefono" type="text" name="telefono"></p>
+
+				<!-- Input e-mail -->
+				<p><input id="email" type="text" name="email"></p>
+
+				<!-- Input genere (sesso) -->
+				<p>
+					<input id="m" type="radio" name="sesso" value="M" checked> M
+					<input id="f" type="radio" name="sesso" value="F"> F
+				</p>
+
+				<!-- Input hobby -->
+				<p><input id="hobby" type="text" name="hobby"></p>				
+
+				<!-- Input professione -->
+				<p><input id="prof" type="text" name="prof"></p>				
+
+			</div>
+
+		</div>
+
+		<!-- Testo di errore -->
+		<p id="error"></p>
+
+		<!-- Contenitore dei pulsanti -->
+		<div class="row">
+
+			<!-- Campi obbligatori -->
+			<p id="obl">*campi obbligatori</p>
+
+			<!-- Pulsante cancella -->
+			<div class="leftBtn">
+				<p><a onclick="deleteInputs()">Cancella</a></p>
+			</div>
+
+			<!-- Pulsante avanti -->
+			<div class="rightBtn">
+				<p><a onclick="validate()">Avanti</a></p>
+			</div>
+
+		</div>
+
+	</form>
+
+</body>
+
+</html>
